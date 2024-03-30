@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const AboutSection = ({id, developerInfo }) => {
+export const AboutSection = ({ id, developerInfo }) => {
   // Check if developerInfo is defined
   if (!developerInfo) {
     return null; // Return null if developerInfo is undefined
@@ -13,12 +13,13 @@ export const AboutSection = ({id, developerInfo }) => {
     <div id={id}>
       <h2 className="text-3xl text-white font-bold mb-8 m-8 text-center">About</h2>
       <section className="py-2">
-        <div className="container mx-auto px-6 flex justify-center items-center">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-center items-center">
           {/* Developer Image */}
           <img
             src={avatarUrl} // Use avatarUrl with null check
             alt="Developer"
-            className="w-64 h-64 md:w-96 md:h-96 rounded-full shadow-2xl mr-8"
+            className="w-64 h-64 md:w-96 md:h-96 rounded-full shadow-2xl mr-8 mb-4 md:mb-0 md:mr-0"
+            style={{ alignSelf: 'center' }} // Center image on small screens
           />
           {/* Information Container */}
           <div className="max-w-screen-md">

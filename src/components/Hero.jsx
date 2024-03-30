@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 export const HeroSection = ({ developerImage, developerName, developerTitle, developerSubtitle }) => {
   return (
     <>
-    <div className="hero min-h-screen  flex items-center justify-center p-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div className="hero min-h-screen mt-4 flex items-center justify-center p-10">
+      <div className="container mx-auto md:max-w-3xl flex flex-col md:flex-row items-center justify-between">
         {/* Text content */}
         <motion.div
           className="text-white text-center md:text-left mb-6 md:mb-0 font-poppins" // Applied custom font styles using @apply
@@ -15,11 +15,10 @@ export const HeroSection = ({ developerImage, developerName, developerTitle, dev
         >
           <div className="flex items-center mb-4 tracking-tighter">
             <h1 className="text-6xl font-bold mr-2">
-              {developerName} 
+              {developerName}<span className="text-green-400">.</span>
             </h1>
-            <div className="w-5 h-5 rounded-full bg-green-400 mt-5"></div>
           </div>
-          <h2 className="text-4xl mb-4">{developerTitle}</h2>
+          <h2 className="text-4xl mt-3 mb-4">{developerTitle}</h2>
           <p className="mb-4">{developerSubtitle}</p>
         </motion.div>
 
@@ -42,13 +41,6 @@ export const HeroSection = ({ developerImage, developerName, developerTitle, dev
     </>
   );
 };
-
-
-
-
-
-
-
 
 
 

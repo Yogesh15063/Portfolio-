@@ -10,6 +10,10 @@ export const Navbar = () => {
     visible: { opacity: 1 },
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed w-full bg-black z-10">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
@@ -25,6 +29,7 @@ export const Navbar = () => {
             offset={-70}
             duration={500}
             className="text-3xl font-bold text-white hover:text-gray-200 transition duration-300 cursor-pointer font-poppins"
+            onClick={closeMenu} // Close menu on link click
           >
             Hire Me.
           </Link>
@@ -45,6 +50,7 @@ export const Navbar = () => {
                 offset={-70}
                 duration={500}
                 className="text-lg font-semibold text-white hover:text-gray-200 transition duration-300 cursor-pointer font-poppins"
+                onClick={closeMenu} // Close menu on link click
               >
                 {link.label}
               </Link>
@@ -81,6 +87,7 @@ export const Navbar = () => {
                 offset={-70}
                 duration={500}
                 className="block px-4 py-2 text-lg font-semibold text-white hover:text-gray-200 transition duration-300 cursor-pointer font-poppins"
+                onClick={closeMenu} // Close menu on link click
               >
                 {link.label}
               </Link>
