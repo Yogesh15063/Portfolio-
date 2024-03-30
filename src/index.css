@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-gradient-to-b {
+      background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    }
+  }
+
+  /* styles.css */
+
+/* custom.css */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins.woff2') format('woff2'); /* Adjust the path as per your project structure */
+  }
+  
+  .text-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
